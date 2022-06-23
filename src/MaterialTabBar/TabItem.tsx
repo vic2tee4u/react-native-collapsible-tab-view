@@ -55,7 +55,6 @@ export const MaterialTabItem = <T extends TabName = string>(
     if (typeof label === 'string') {
       return (
         <Animated.Text style={[styles.label, stylez, labelStyle]}>
-          {label}
           <MaterialIcons name={label || 'layers-outline'} size={30} />
         </Animated.Text>
       )
