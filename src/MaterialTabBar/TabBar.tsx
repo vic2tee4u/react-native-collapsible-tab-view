@@ -218,6 +218,7 @@ const MaterialTabBar = <T extends TabName = TabName>({
             activeColor={activeColor}
             inactiveColor={inactiveColor}
             style={tabStyle}
+            {...tabProps}
           />
         )
       })}

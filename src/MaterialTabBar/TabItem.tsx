@@ -4,6 +4,7 @@ import Animated, {
   interpolate,
   useAnimatedStyle,
 } from 'react-native-reanimated'
+import MaterialIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 
 import { TabName } from '../types'
 import { MaterialTabItemProps } from './types'
@@ -55,6 +56,7 @@ export const MaterialTabItem = <T extends TabName = string>(
       return (
         <Animated.Text style={[styles.label, stylez, labelStyle]}>
           {label}
+          <MaterialIcons name={label || 'layers-outline'} size={30} />
         </Animated.Text>
       )
     }
