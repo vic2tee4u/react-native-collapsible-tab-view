@@ -32,6 +32,7 @@ export const MaterialTabItem = <T extends TabName = string>(
     inactiveColor = DEFAULT_COLOR,
     inactiveOpacity = 0.7,
     pressColor = '#DDDDDD',
+    iconProps,
     pressOpacity = Platform.OS === 'ios' ? 0.2 : 1,
     ...rest
   } = props
@@ -55,13 +56,17 @@ export const MaterialTabItem = <T extends TabName = string>(
     if (typeof label === 'string') {
       return (
         <Animated.Text style={[styles.label, stylez, labelStyle]}>
-          <MaterialIcons name={label || 'layers-outline'} size={30} />
+          <MaterialIcons
+            name={label || 'layers-outline'}
+            size={30}
+            {...iconProps}
+          />
         </Animated.Text>
       )
     }
 
     return label(props)
-  }, [label, labelStyle, props, stylez])
+  }, [iconProps, label, labelStyle, props, stylez])
 
   return (
     <Pressable

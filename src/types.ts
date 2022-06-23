@@ -45,6 +45,14 @@ export type TabBarProps<T extends TabName = TabName> = {
    * Custom width of the tabbar. Defaults to the window width.
    */
   width?: number
+  /**
+   * Icon Props
+   */
+  iconProps?: any
+  /**
+   * Indicator
+   */
+  indicatorStyle?: StyleProp<ViewStyle>
 }
 
 export type IndexChangeEventData<T extends TabName = TabName> = {
@@ -128,6 +136,15 @@ export type CollapsibleProps = {
    * @default false
    */
   allowHeaderOverscroll?: boolean
+
+  /**
+   * Icon Props
+   */
+  iconProps?: any
+  /**
+   * Indicator STyle
+   */
+  indicatorStyle: StyleProp<ViewStyle>
 }
 
 export type ContextType<T extends TabName = TabName> = {

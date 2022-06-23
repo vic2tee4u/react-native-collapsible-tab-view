@@ -59,6 +59,7 @@ const MaterialTabBar = <T extends TabName = TabName>({
   tabStyle,
   width: customWidth,
   keepActiveTabCentered,
+  iconProps,
 }: MaterialTabBarProps<T>): React.ReactElement => {
   const tabBarRef = useAnimatedRef<Animated.ScrollView>()
   const windowWidth = useWindowDimensions().width
@@ -218,6 +219,7 @@ const MaterialTabBar = <T extends TabName = TabName>({
             activeColor={activeColor}
             inactiveColor={inactiveColor}
             style={tabStyle}
+            iconProps={iconProps}
             {...tabProps}
           />
         )

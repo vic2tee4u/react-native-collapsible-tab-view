@@ -81,6 +81,8 @@ export const Container = React.memo(
         onTabChange,
         width: customWidth,
         allowHeaderOverscroll,
+        iconProps,
+        indicatorStyle,
       },
       ref
     ) => {
@@ -402,6 +404,7 @@ export const Container = React.memo(
                     indexDecimal,
                     onTabPress,
                     tabProps,
+                    indicatorStyle,
                   })}
               </View>
               <View
@@ -419,6 +422,8 @@ export const Container = React.memo(
                     width,
                     onTabPress,
                     tabProps,
+                    iconProps,
+                    indicatorStyle,
                   })}
               </View>
             </Animated.View>
